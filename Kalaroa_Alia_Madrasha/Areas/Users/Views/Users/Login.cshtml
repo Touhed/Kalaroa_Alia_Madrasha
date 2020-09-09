@@ -1,0 +1,43 @@
+﻿@model Kalaroa_Alia_Madrasha.Models.Users
+@{
+    Layout = "_LayoutForLogin";
+    ViewData["Title"] = "Login ";
+    ViewData["loginActive"] = "active";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
+</head>
+<body style="background-color: darkgray;align-content: center; font-family: 'Times New Roman', Times, serif;">
+    <div class="container" style="width: 30%;">
+		<form class="login100-form validate-form" asp-area="Users" asp-controller="Users" asp-action="Login" method="post" role="form">
+			<div class="text-danger"><center><h3>@ViewBag.Login</h3></center></div>
+			<h2 style="text-align: center;"><span class="form-title">Member Login</span></h2>
+
+			<div style="text-align: center;">
+				<h3>
+					@DateTime.Now
+				</h3>
+			</div>
+
+            <div class="validate-input" data-validate="Valid email is required: abc@gmail.com">
+                <label for="usr">Email:</label><i class="fas fa-user"></i><br />
+                <input class="form-control" type="email" name="email" placeholder="Enter Valid Email Here" required>
+            </div>
+			<br />
+            <div class="validate-input" data-validate="Password is required">
+                <label for="pwd">Password:</label><i class="fas fa-lock"></i><br />
+                <input class="form-control" type="password" name="password" placeholder="Enter Your Password Here" required>
+            </div>
+			<br />
+			<div class="form-btn">
+				<input class="btn-success" type="submit" value="Login" style="text-align: center;" />
+			</div>
+		</form>
+	</div>
+</body>
+</html>

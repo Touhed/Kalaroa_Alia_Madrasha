@@ -1,0 +1,208 @@
+﻿@{
+    ViewData["Title"] = "Class 10";
+}
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <style>
+                    .vertical-menu {
+                        width: 200px;
+                    }
+
+                        .vertical-menu a {
+                            background-color: #eee;
+                            color: black;
+                            display: block;
+                            padding: 12px;
+                            text-decoration: none;
+                        }
+
+                            .vertical-menu a:hover {
+                                background-color: #ccc;
+                            }
+
+                            .vertical-menu a.active {
+                                background-color: #4CAF50;
+                                color: white;
+                            }
+                </style>
+
+
+                <div class="vertical-menu" style="height: 100%">
+                    <a href="http://localhost:49775/" class="active">Home</a>
+                    <a href="http://localhost:49775/Result/Class_1">Class_1</a>
+                    <a href="http://localhost:49775/Result/Class_2">Class_2</a>
+                    <a href="http://localhost:49775/Result/Class_3">Class_3</a>
+                    <a href="http://localhost:49775/Result/Class_4">Class_4</a>
+                    <a href="http://localhost:49775/Result/Class_5">Class_5</a>
+                    <a href="http://localhost:49775/Result/Class_6">Class_6</a>
+                    <a href="http://localhost:49775/Result/Class_7">Class_7</a>
+                    <a href="http://localhost:49775/Result/Class_8">Class_8</a>
+                    <a href="http://localhost:49775/Result/Class_9">Class_9</a>
+                    <a href="http://localhost:49775/Result/Class_10">Class_10</a>
+                    <a href="http://localhost:49775/Result/Alim_1st_Year">Alim_1st_Year</a>
+                    <a href="http://localhost:49775/Result/Alim_2nd_Year">Alim_2nd_Year</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="panel panel-primary" style="height: 500px">
+                    <!-- Notice Board Start-->
+                    <div class="panel-heading" style="background-color: darkgreen">
+                        <i class="fa fa-spinner fa-spin"></i> &nbsp; Result
+                    </div>
+                    <div class="panel-body" style="font-size: medium">
+                        <div class="category-title">
+                            <div class="base-box page-wrap">
+                                <h1 id="ContentPlaceHolder1_pagetitle" class="page-title">Student Result</h1>
+                                <div id="ContentPlaceHolder1_dvPageContent" class="entry-content">
+                                    <table cellpadding="0" cellspacing="0" border="0" id="tblStudentResult" style="border-color: black">
+                                        <tbody>
+                                            <tr>
+                                                <td>Session:</td>
+                                                <td>
+                                                    <select name="ctl00$ContentPlaceHolder1$ddlAcademicYear" id="ddlAcademicYear" style="width:200px;">
+                                                        <option value="0">Select</option>
+                                                        <option value="1">2015</option>
+                                                        <option value="2">2016</option>
+                                                        <option value="3">2017</option>
+                                                        <option value="4">2016-2017</option>
+                                                        <option value="5">2017-2018</option>
+                                                        <option value="6">2018</option>
+                                                        <option value="7">2018-2019</option>
+                                                        <option value="8">2017-18</option>
+
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Class:
+                                                </td>
+                                                <td>
+                                                    <select name="ctl00$ContentPlaceHolder1$ddlClass" id="ddlClass" onchange="ddlClass_Change(this.value);" style="width:200px;">
+                                                        <option value="0">Select</option>
+                                                        <option value="7">HSC(1st Year)</option>
+                                                        <option value="8">HSC(2nd Year)</option>
+                                                        <option value="9">HONs(1st Year)</option>
+                                                        <option value="10">HONs(2nd Year)</option>
+                                                        <option value="11">HONs(3rd Year) </option>
+                                                        <option value="13">HONs(Final Year)</option>
+
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Group:
+                                                </td>
+                                                <td>
+                                                    <select name="ctl00$ContentPlaceHolder1$ddlGroup" id="ddlGroup" onchange="ddlGroup_change(this.value);" style="width:200px;">
+                                                        <option value="0">Select</option>
+                                                        <option value="1">Science </option>
+                                                        <option value="2">Business Studies </option>
+                                                        <option value="3">Humanities</option>
+
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Exam:</td>
+                                                <td>
+                                                    <select name="ctl00$ContentPlaceHolder1$ddlExam" id="ddlExam" style="width:200px;">
+                                                        <option value="0">Exam Type</option>
+                                                        <option value="14">Half Yearly</option>
+                                                        <option value="55">Model Test </option>
+                                                        <option value="55">Year Final </option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Student ID:</td>
+                                                <td>
+                                                    <input name="ctl00$ContentPlaceHolder1$txtStudentRoll" type="text" id="txtStudentRoll" placeholder="Student id" style="width:200px;">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>
+                                                    <span id="lblPublishedNote" style="color:Red;font-size:8pt;font-weight:bold;"></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>
+                                                    <input type="button" value="Get Result" title="Get Result" onclick="getStudentResult();" placeholder="">
+                                                    <input type="button" value="Print" title="Print" onclick="printReportCard();">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div id="dvStdResult" style="max-width:1000px; overflow:scroll;"><div id="loading"><span>Wait for Result.</span></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-primary" style="height: 350px">
+                    <div class="panel-heading" style="background-color: darkgreen">
+                        <i class="fa fa-spinner fa-spin"></i> &nbsp; NOTICE BOARD
+                    </div>
+                    <div class="panel-body">
+                        <marquee style="text-align: center;height: 280px;" behavior="scroll" direction="up" scrollamount="4" onmouseover="this.stop()" onmouseout="this.start()">
+                            <ul>
+                                <li>
+                                    <a href="http://www.bmeb.gov.bd/site/notices/170890bb-5bf7-4e75-b02b-eab679f7c773/২০১৯-সালের-আলিম-ব্যবহারিক-পরীক্ষার-অভ্যন্তরিণ-ও-বহিরাগত-পরীক্ষক-তালিকা।-" title="২০১৯ সালের আলিম ব্যবহারিক পরীক্ষার অভ্যন্তরিণ ও বহিরাগত পরীক্ষক তালিকা। ">২০১৯ সালের আলিম ব্যবহারিক পরীক্ষার অভ্যন্তরিণ ও বহিরাগত পরীক্ষক তালিকা। </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.bmeb.gov.bd/site/notices/59f88423-907a-4855-a0fe-aadcadc36b87/২০১৯-সালের-দাখিল-পরীক্ষা-কোন-পরীক্ষার্থী-উত্তীর্ণ-না-হওয়া-মাদ্রাসা-প্রধানদের-কারণ-দর্" title="২০১৯ সালের দাখিল পরীক্ষা কোন পরীক্ষার্থী উত্তীর্ণ না হওয়া মাদ্রাসা প্রধানদের কারণ দর্...">২০১৯ সালের দাখিল পরীক্ষা কোন পরীক্ষার্থী উত্তীর্ণ না হওয়া মাদ্রাসা প্রধানদের কারণ দর্...</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.bmeb.gov.bd/site/notices/86fffaae-4558-4cee-98e5-2943399b1a63/দাখিল-পরীক্ষার-ফল-পুননিরীক্ষণের-আবেদন-সংক্রান্ত-বিজ্ঞপ্তি।-" title="দাখিল পরীক্ষার ফল পুন:নিরীক্ষণের আবেদন সংক্রান্ত বিজ্ঞপ্তি। ">দাখিল পরীক্ষার ফল পুন:নিরীক্ষণের আবেদন সংক্রান্ত বিজ্ঞপ্তি। </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.bmeb.gov.bd/site/notices/986f8ae8-7418-4590-b987-f41c5a28c545/জনাব-মোঃ-সফি-উল্যার-ইন্ডিয়া-ভিসা-প্রাপ্তির-অনুমতিপত্র।-" title="জনাব মোঃ সফি উল্যার ইন্ডিয়া ভিসা প্রাপ্তির অনুমতিপত্র। ">জনাব মোঃ সফি উল্যার ইন্ডিয়া ভিসা প্রাপ্তির অনুমতিপত্র। </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.bmeb.gov.bd/site/notices/0862fffe-f41e-40a1-989a-54d257c4a568/-২০১৯-সালের-দাখিল-পরীক্ষার-ফল-প্রকাশ-সংক্রান্ত-বিজ্ঞপ্তি।-" title=" ২০১৯ সালের দাখিল পরীক্ষার ফল প্রকাশ সংক্রান্ত বিজ্ঞপ্তি। "> ২০১৯ সালের দাখিল পরীক্ষার ফল প্রকাশ সংক্রান্ত বিজ্ঞপ্তি। </a>
+                                </li>
+                            </ul>
+                        </marquee>
+                        <div class="btn right" style="text-align: center;">
+                            <a class="btn-default" href="http://www.bmeb.gov.bd/site/view/notices" title="সকল নোটিশ">See More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="panel panel-primary" style="height: 350px">
+                    <!-- Notice Board Start-->
+                    <div class="panel-heading" style="background-color: darkgreen">
+                        <i class="fa fa-spinner fa-spin"></i> &nbsp; Event
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="#">Victory Day Celebration</a></li>
+                            <li><a href="#">Independent Day Celebration</a></li>
+                            <li><a href="#">Annual Function</a></li>
+                            <li><a href="#">Cultural Program</a></li>
+                            <li><a href="#">Price Giving Ceremony</a></li>
+                            <li><a href="#">Co-curricular Activities</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+

@@ -1,0 +1,372 @@
+﻿<!doctype html>
+<html class="no-js " lang="en">
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Site Meta -->
+    <title>Kalaroa Alia Madrasha</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="#">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
+      
+    <!-- Custom & Default Styles -->
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/animate.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="~/css/menu.css" />
+    <link rel="stylesheet" href="~/css/layout.css" />
+
+    <!--[if lt IE 9]>
+        <script src="js/vendor/html5shiv.min.js"></script>
+        <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="wrapper">
+        <div class="topbar" style="background-color: white;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 hidden-xs">
+                        <nav class="topbar-menu">
+                            <ul class="list-inline">
+                                <li>Follow us: </li>
+                                <li><a href="https://www.facebook.com/?lang=en"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                                <li> @DateTime.Now</li>
+                            </ul><!-- end list -->
+                        </nav><!-- end menu -->
+                    </div><!-- end col -->
+                    <div class="col-md-5 col-sm-5">
+                        <nav class="topbar-menu">
+                            <ul class="list-inline text-right navbar-right">
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <img src="~/images/Flags/BD.png" alt=""> Bangladesh
+                                        <span class="fas fa-angle-down"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><img src="~/images/Flags/us.png" alt=""> English</a></li>
+                                        <li><a href="#"><img src="~/images/Flags/tr.png" alt=""> Turkish</a></li>
+                                        <li><a href="#"><img src="~/images/Flags/si.png" alt=""> Spanish</a></li>
+                                        <li><a href="#"><img src="~/images/Flags/it.png" alt=""> Italian</a></li>
+                                        <li><a href="#"><img src="~/images/Flags/ae.png" alt=""> Arabic</a></li>
+                                        <li><a href="#"><img src="~/images/Flags/de.png" alt=""> German</a></li>
+                                    </ul>
+                                </li>
+                                <li class="hidden-xs"><i class="fas fa-clock"></i> 08:00 AM - 05:00 PM</li>
+                                <li><i class="fas fa-mobile-alt"></i> +88 01775396637</li>
+                            </ul><!-- end list -->
+                        </nav><!-- end menu -->
+                    </div><!-- end col -->
+                    <div class="col-md-3 col-sm-3">
+                        <form class="form-inline my-2 my-lg-0">
+                            <button asp-area="Users" asp-controller="Users" asp-action="Login" class="btn btn-transparent btn-sm" type="submit">Login</button>
+                            <button asp-area="Users" asp-controller="Users" asp-action="Login" class="btn btn-transparent btn-sm" type="submit">Logout</button>
+                        </form>
+                    </div>
+                    </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end topbar -->
+
+        <header class="header site-header colorfulheader">
+            <div class="container-fluid">
+                <nav class="navbar navbar-default yamm">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button"class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primaryNavbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#"><img src="#" alt=""></a>
+                        </div>
+                        <div class="col-sm-12">
+                            <h1 style="font-size: 48px; font-weight: bold; margin-left:150px; text-align: center;">Kalaroa Alia (Fazil) Madrasha</h1>
+                        </div>
+                        <div id="primaryNavbar">
+                            <div id="cssmenu">
+                                <ul style="align-content: center; position: center; padding-left: 10%;">
+                                    <li><a asp-controller="Home" asp-action="Index" style="font-size: 17px;font-weight: bold;color: white;">Home</a></li>
+
+                                    <li>
+                                        <a>
+                                            <div class="menu_item">Academic</div>
+                                        </a>
+                                        <ul>
+                                            <li><a asp-area="" asp-controller="Home" asp-action="RulesAndRegulation" style="background-color: #0F172D;color:white">Rules & Regulation</a></li>
+                                            <li><a asp-area="Student" asp-controller="Student" asp-action="StudentList" style="background-color: #0F172D;color:white">Student Information</a></li>
+                                            <li><a asp-area="" asp-controller="Home" asp-action="ClassRoutine" style="background-color: #0F172D;color:white">Class Routine</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a>
+                                            <div class="menu_item"> Admission </div>
+                                        </a>
+                                        <ul>
+                                            <li><a asp-area="" asp-controller="Home" asp-action="AdmissionInformation" style="background-color: #0F172D;color:white">Admission Information</a></li>
+                                            <li><a asp-area="" asp-controller="Home" asp-action="AdmissionGuidelines" style="background-color: #0F172D;color:white">Admission Guidelines</a></li>
+                                            <li><a asp-area="" asp-controller="Home" asp-action="AdmissionContact" style="background-color: #0F172D;color:white">Admission Contact</a></li>
+                                            <li><a asp-area="" asp-controller="Home" asp-action="Scholarship" style="background-color: #0F172D;color:white">Scholarship</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a>
+                                            <div class="menu_item"> Users </div>
+                                        </a>
+                                        <ul>
+                                            <li><a asp-area="Users" asp-controller="Users" asp-action="CreateUserAccount" style="background-color: #0F172D;color:white;">Create User Account</a></li>
+                                            <li><a asp-area="Users" asp-controller="Users" asp-action="UserList" style="background-color: #0F172D;color:white">User List</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a>
+                                            <div class="menu_item"> Actor </div>
+                                        </a>
+                                        <ul>
+                                            <li><a asp-area="Actor" asp-controller="Actor" asp-action="AddNewActor" style="background-color: #0F172D;color:white;">Add New Actor</a></li>
+                                            <li><a asp-area="Actor" asp-controller="Actor" asp-action="ActorList" style="background-color: #0F172D;color:white">Actor List</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a>
+                                            <div class="menu_item"> Admin </div>
+                                        </a>
+                                        <ul>
+                                            <li><a asp-area="Admin" asp-controller="Admin" asp-action="AddNewAdmin" style="background-color: #0F172D;color:white;">Add New Admin</a></li>
+                                            <li><a asp-area="Admin" asp-controller="Admin" asp-action="AdminList" style="background-color: #0F172D;color:white">Admin List</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a>
+                                            <div class="menu_item"> Account </div>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a>
+                                                    <div class="menu_item"> Teacher </div>
+                                                </a>
+                                                <ul>
+                                                    <li><a asp-area="Account" asp-controller="Account" asp-action="CreateTeacherAccount" style="background-color: #0F172D;color:white">Create Teacher Account</a></li>
+                                                    <li><a asp-area="Account" asp-controller="Account" asp-action="TeacherAccountList" style="background-color: #0F172D;color:white">Teacher Account List</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <div class="menu_item"> Student </div>
+                                                </a>
+                                                <ul>
+                                                    <li><a asp-area="Account" asp-controller="Account" asp-action="CreateStudentAccount" style="background-color: #0F172D;color:white">Create Student Account</a></li>
+                                                    <li><a asp-area="Account" asp-controller="Account" asp-action="StudentAccountList" style="background-color: #0F172D;color:white">Student Account List</a></li>
+                                                    <li>
+                                                        <a>
+                                                            <div class="menu_item"> Admission Fee </div>
+                                                        </a>
+                                                        <ul>
+                                                            <li><a asp-area="Account" asp-controller="Account" asp-action="AdmissionFee" style="background-color: #0F172D;color:white">Admission Fee</a></li>
+                                                            <li><a asp-area="Account" asp-controller="Account" asp-action="AdmissionList" style="background-color: #0F172D;color:white">Admission List</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <div class="menu_item"> Student Payment </div>
+                                                        </a>
+                                                        <ul>
+                                                            <li><a asp-area="Account" asp-controller="Account" asp-action="StudentPayment" style="background-color: #0F172D;color:white">Student Payment</a></li>
+                                                            <li><a asp-area="Account" asp-controller="Account" asp-action="StudentPaymentList" style="background-color: #0F172D;color:white">Student Payment List</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a>
+                                            <div class="menu_item"> Result </div>
+                                        </a>
+                                        <ul>
+                                            <li><a asp-area="Result" asp-controller="Result" asp-action="AddNewResult">Add Result</a></li>
+                                            <li>
+                                                <a>
+                                                    <div class="menu_item"> View Result List </div>
+                                                </a>
+                                                <ul>
+                                                    <li><a asp-area="Result" asp-controller="Result" asp-action="Class_1">Class 1</a></li>
+                                                    <li><a asp-area="Result" asp-controller="Result" asp-action="Class_2">Class 2</a></li>
+                                                    <li><a asp-area="Result" asp-controller="Result" asp-action="Class_3">Class 3</a></li>
+                                                    <li><a asp-area="Result" asp-controller="Result" asp-action="Class_4">Class 4</a></li>
+                                                    <li><a asp-area="Result" asp-controller="Result" asp-action="Class_5">Class 5</a></li>
+                                                    <li><a asp-area="Result" asp-controller="Result" asp-action="Class_6">Class 6</a></li>
+                                                    <li><a asp-area="Result" asp-controller="Result" asp-action="Class_7">Class 7</a></li>
+                                                    <li><a asp-area="Result" asp-controller="Result" asp-action="Class_8">Class 8</a></li>
+                                                    <li><a asp-area="Result" asp-controller="Result" asp-action="Class_9">Class 9</a></li>
+                                                    <li><a asp-area="Result" asp-controller="Result" asp-action="Class_10">Class 10</a></li>
+                                                    <li><a asp-area="Result" asp-controller="Result" asp-action="Alim_1st_Year">Alim 1st Year</a></li>
+                                                    <li><a asp-area="Result" asp-controller="Result" asp-action="Alim_2nd_Year">Alim 2nd Year</a></li>
+                                                    <li>
+                                                        <a>
+                                                            <div class="menu_item"> Board Result </div>
+                                                        </a>
+                                                        <ul>
+                                                            <li><a href="http://dperesult.teletalk.com.bd/dpe.php">PSC</a></li>
+                                                            <li><a href="http://www.educationboardresults.gov.bd/">JDC/Dakhil/Alim</a></li>
+                                                            <li><a href="http://result.iau.edu.bd/">Fazil</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a>
+                                            <div class="menu_item"> Teacher </div>
+                                        </a>
+                                        <ul>
+                                            <li><a asp-area="Teacher" asp-controller="Teacher" asp-action="AddTeacher" style="background-color: #0F172D;color:white">Add New Teacher </a></li>
+                                            <li><a asp-area="Teacher" asp-controller="Teacher" asp-action="TeacherList" style="background-color: #0F172D;color:white">Teacher List</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a>
+                                            <div class="menu_item"> Student </div>
+                                        </a>
+                                        <ul>
+                                            <li><a asp-area="Student" asp-controller="Student" asp-action="AddStudent" style="background-color: #0F172D;color:white">Add New Student</a></li>
+                                            <li><a asp-area="Student" asp-controller="Student" asp-action="StudentList" style="background-color: #0F172D;color:white">Student List</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a>
+                                            <div class="menu_item"> Department </div>
+                                        </a>
+                                        <ul>
+                                            <li><a asp-area="" asp-controller="Home" asp-action="Arts">Arts</a></li>
+                                            <li><a asp-area="" asp-controller="Home" asp-action="Science">Science</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a asp-area="" asp-controller="Home" asp-action="About" style="font-size: 17px;font-weight: bold;color: white;">About</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Contact" style="font-size: 17px;font-weight: bold;color: white;">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div><!-- /.nav-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav><!-- end nav -->
+            </div><!-- end container -->
+        </header><!-- end header -->
+
+        @RenderBody()
+        <hr />
+        <footer class="footer primary-footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3">
+                        <div class="widget clearfix">
+                            <h4 class="widget-title">Connect With US</h4>
+                            <div class="newsletter-widget">
+                                <p>You can opt out of our newsletters at any time. See our privacy policy.</p>
+                                <form class="form-inline" role="search">
+                                    <div class="form-1">
+                                        <input type="text" class="form-control" placeholder="Enter email here..">
+                                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
+                                    </div>
+                                </form>
+                            </div><!-- end newsletter -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+                    <div class="col-md-3 col-sm-3">
+                        <div class="widget clearfix">
+                            <h4 class="widget-title">Important Links</h4>
+                            <ul>
+                                <li><a target="_blank" href="https://www.teachers.gov.bd/%22" style="color: white">-শিক্ষক বাতায়ন</a></li>
+                                <li><a target="_blank" href="https://moedu.gov.bd/" style="color: white">-Ministry of Education</a></li>
+                                <li><a target="_blank" href="http://www.jessoreboard.gov.bd/" style="color: white">-Jessore Education Board</a></li>
+                                <li><a target="_blank" href="http://www.nctb.gov.bd/" style="color: white">-NCTB</a></li>
+                                <li><a target="_blank" href="http://www.bmeb.gov.bd/" style="color: white">-বাংলাদেশ মাদ্রাসা শিক্ষা বোর্ড</a></li>
+                                <li><a target="_blank" href="http://www.bteb.gov.bd/" style="color: white">-Technical Education Board</a></li>
+                                <li><a target="_blank" href="http://www.dshe.gov.bd/" style="color: white">-Directorate Of Secondary and Higher Education</a></li>
+                            </ul>
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+                    
+                    <div class="col-md-3 col-sm-3">
+                        <div class="widget clearfix">
+                            <h4 class="widget-title">Address</h4>
+                            <address>
+                                Kalaroa Alia (Fazil) Madrasha,<br />
+
+                                Kalaroa Alia (Fazil) Madrasha- 34085<br />
+                                Tulshidanga,<br /> Kalaroa Rd, Kalaroa - 9410
+                                <br />Satkhira-Jessore-Dhaka Highway
+                                <br />Khulna Bangladesh<br />
+
+                                Tel: 000000000<br />
+                                Mobile:+88-01718872653<br />
+                                Fax: 000000000<br />
+                                Email : kalaroaaliamadrasha.bd@gmail.com<br />
+                            </address>
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+                    <div class="col-md-3 col-sm-3">
+                        <div class="widget clearfix">
+                            <h4 class="widget-title">Be Social</h4>
+                            <ul>
+                                <li><a href="https://facebook.com/?lang=en" style="color: white">Facebook</a></li>
+                                <li><a href="https://twitter.com/?lang=en" style="color: white">Twitter</a></li>
+                                <li><a href="https://www.instagram.com/" style="color: white">Instagram</a></li>
+                                <li><a href="https://www.linkedin.com/" style="color: white">Linkedin</a></li>
+                            </ul>
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </footer><!-- end primary-footer -->
+        <footer class="footer secondary-footer" style="background: #353535;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <p style="color:white;">2019 &copy; Kalaroa_Alia_Madrasha. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <ul class="list-inline">
+                            <li style="color:white;">Designed: <a href="https://www.facebook.com/touhedur.rahman.73" style="color: chartreuse;" >Md. Touhedur Rahman</a></li>
+                        </ul>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </footer><!-- end second footer -->
+    </div><!-- end wrapper -->
+    <!-- jQuery Files -->
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/parallax.js"></script>
+    <script src="~/js/animate.js"></script>
+    <script src="~/js/custom.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,69 @@
+﻿@model Kalaroa_Alia_Madrasha.Models.Users
+@{
+    ViewData["Title"] = "Admin Page";
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html>
+<body style="background-color: darkgray; text-align: center; font-family: 'Times New Roman', Times, serif;">
+    <div class="form-group">
+        <h2 style="text-align: center;">Choose For Create Account</h2>
+        <hr />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <form asp-area="Actor" asp-controller="Actor" asp-action="AddNewActor" method="get">
+                        <button class="btn btn-primary btn-lg">Add Actor</button>
+                    </form>
+                    <br />
+                    <form asp-area="Admin" asp-controller="Admin" asp-action="AddNewAdmin" method="get">
+                        <button class="btn btn-primary btn-lg">Add Admin</button>
+                    </form>
+                    <br />
+                    <form asp-area="Users" asp-controller="Users" asp-action="CreateUserAccount" method="get">
+                        <button class="btn btn-primary btn-lg">Add User Account</button>
+                    </form>
+                    <br />
+                    <form asp-area="Teacher" asp-controller="Teacher" asp-action="AddTeacher" method="get">
+                        <button class="btn btn-primary btn-lg">Add New Teacher</button>
+                    </form>
+                    <br />
+                    <form asp-area="Account" asp-controller="Account" asp-action="CreateStudentAccount" method="get">
+                        <button class="btn btn-primary btn-lg">Add Students Account</button>
+                    </form>
+                    <br />
+                    <form asp-area="Account" asp-controller="Account" asp-action="CreateTeacherAccount" method="get">
+                        <button class="btn btn-primary btn-lg">Add Teachers Account</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <form asp-area="Actor" asp-controller="Actor" asp-action="ViewActorList" method="get">
+                        <button class="btn btn-primary btn-lg">Actor List</button>
+                    </form>
+                    <br />
+                    <form asp-area="Admin" asp-controller="Admin" asp-action="ViewAdminList" method="get">
+                        <button class="btn btn-primary btn-lg">Admin List</button>
+                    </form>
+                    <br />
+                    <form asp-area="Users" asp-controller="Users" asp-action="ViewUserList" method="get">
+                        <button class="btn btn-primary btn-lg">User List</button>
+                    </form>
+                    <br />
+                    <form asp-area="Teacher" asp-controller="Teacher" asp-action="ViewTeacherList" method="get">
+                        <button class="btn btn-primary btn-lg">Teacher List</button>
+                    </form>
+                    <br />
+                    <form asp-area="Account" asp-controller="Account" asp-action="ViewStudentAccountList" method="get">
+                        <button class="btn btn-primary btn-lg">Students Account List</button>
+                    </form>
+                    <br />
+                    <form asp-area="Account" asp-controller="Account" asp-action="ViewTeacherAccountList" method="get">
+                        <button class="btn btn-primary btn-lg">Teachers Account List</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

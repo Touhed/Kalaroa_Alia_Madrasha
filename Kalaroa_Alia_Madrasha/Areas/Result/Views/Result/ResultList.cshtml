@@ -1,0 +1,44 @@
+﻿@model List<Kalaroa_Alia_Madrasha.ViewModel.ResultVM>
+@{
+    ViewData["Title"] = "Result";
+}
+
+<h1 style="text-align:center">Result Information</h1>
+
+<div class="container" style="width: 20%;">
+    <div class="form-group">
+        <div class="input-group-addon">
+            <form asp-area="Result" asp-controller="Result" asp-action="Search">
+                <input placeholder="Search By Id" class="form-control" name="id" />
+                <a asp-area="Result" asp-controller="Result" asp-action="Search" asp-route-id="id"><input type="submit" value="Search" /></a>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <table border="1" class="table table-bordered">
+        <thead>
+            <tr>
+                <td style="text-align:center; font-weight: bold;">Student Id</td>
+                <td style="text-align:center; font-weight: bold;">Student Name</td>
+                <td style="text-align:center; font-weight: bold;">Session</td>
+                <td style="text-align:center; font-weight: bold;">Department</td>
+                <td style="text-align:center; font-weight: bold;">Class</td>
+                <td style="text-align:center; font-weight: bold;">Subject</td>
+                <td style="text-align:center; font-weight: bold;">Marks</td>
+            </tr>
+        </thead>
+        @foreach (var r in Model)
+        {
+    <tr>
+        <td style="text-align:center">@r.StudentId</td>
+        <td style="text-align:center">@r.StudentName</td>
+        <td style="text-align:center">@r.StSession</td>
+        <td style="text-align:center">@r.SDepartment</td>
+        <td style="text-align:center">@r.SClass</td>
+        <td style="text-align:center">@r.Subject</td>
+        <td style="text-align:center">@r.Marks</td>
+    </tr>
+        }
+    </table>
+</div>

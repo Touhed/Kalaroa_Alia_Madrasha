@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Kalaroa Alia Madrasha</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+
+    <style>
+        .affix {
+            top: 0;
+            width: 100%;
+            z-index: 9999 !important;
+        }
+
+        .navbar {
+            margin-bottom: 0px;
+        }
+
+        .affix ~ .container-fluid {
+            position: relative;
+            top: 50px;
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+            .dropdown-submenu > .dropdown-menu {
+                top: 0;
+                left: 100%;
+                margin-top: -6px;
+                margin-left: -1px;
+                -webkit-border-radius: 0 6px 6px 6px;
+                -moz-border-radius: 0 6px 6px;
+                border-radius: 0 6px 6px 6px;
+            }
+
+            .dropdown-submenu:hover > .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-submenu > a:after {
+                display: block;
+                content: " ";
+                float: right;
+                width: 0;
+                height: 0;
+                border-color: transparent;
+                border-style: solid;
+                border-width: 5px 0 5px 5px;
+                border-left-color: #ccc;
+                margin-top: 5px;
+                margin-right: -10px;
+            }
+
+            .dropdown-submenu:hover > a:after {
+                border-left-color: #fff;
+            }
+
+            .dropdown-submenu.pull-left {
+                float: none;
+            }
+
+                .dropdown-submenu.pull-left > .dropdown-menu {
+                    left: -100%;
+                    margin-left: 10px;
+                    -webkit-border-radius: 6px 0 6px 6px;
+                    -moz-border-radius: 6px 0 6px 6px;
+                    border-radius: 6px 0 6px 6px;
+                }
+    </style>
+
+</head>
+<body>
+    <div class="topbar" style="background-color: white;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 hidden-xs">
+                    <nav class="topbar-menu">
+                        <ul class="list-inline">
+                            <li>Follow us: </li>
+                            <li><a href="https://www.facebook.com/?lang=en"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                            <li> @DateTime.Now</li>
+                        </ul><!-- end list -->
+                    </nav><!-- end menu -->
+                </div><!-- end col -->
+                <div class="col-md-5 col-sm-5">
+                    <nav class="topbar-menu">
+                        <ul class="list-inline text-right navbar-right">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <img src="~/images/Flags/BD.png" alt=""> Bangladesh
+                                    <span class="fas fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><img src="~/images/Flags/us.png" alt=""> English</a></li>
+                                    <li><a href="#"><img src="~/images/Flags/tr.png" alt=""> Turkish</a></li>
+                                    <li><a href="#"><img src="~/images/Flags/si.png" alt=""> Spanish</a></li>
+                                    <li><a href="#"><img src="~/images/Flags/it.png" alt=""> Italian</a></li>
+                                    <li><a href="#"><img src="~/images/Flags/ae.png" alt=""> Arabic</a></li>
+                                    <li><a href="#"><img src="~/images/Flags/de.png" alt=""> German</a></li>
+                                </ul>
+                            </li>
+                            <li class="hidden-xs"><i class="fas fa-clock"></i> 08:00 AM - 05:00 PM</li>
+                            <li><i class="fas fa-mobile-alt"></i> +88 01775396637</li>
+                        </ul><!-- end list -->
+                    </nav><!-- end menu -->
+                </div><!-- end col -->
+                <div class="col-md-3 col-sm-3">
+                    <form class="form-inline my-2 my-lg-0">
+                        <button asp-area="Users" asp-controller="Users" asp-action="Login" class="btn btn-transparent btn-sm" type="submit">Login</button>
+                        <button asp-area="Users" asp-controller="Users" asp-action="Login" class="btn btn-transparent btn-sm" type="submit">Logout</button>
+                    </form>
+                </div>
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end topbar -->
+
+    <div class="container-fluid" style="background-color:darkgreen;color:#fff;">
+        <div class="row">
+            @*<div class="col-sm-1" style="height :100px;">
+                <span>
+                    <img src="#" class="img-circle" alt="Cinque Terre" width="100" height="78" style="padding-top:19px;">
+                </span>
+            </div>*@
+            <div class="col-sm-10">
+                <h2 style="margin-left:75px;width: auto; text-align: center;">Kalaroa Alia (Fazil) Madrasha</h2>
+            </div>
+            <div class="col-sm-3" style="padding:0;">
+
+            </div>
+            <div class="clearfix visible-sm"></div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197" style="border-radius: 0;">
+        <div class="container-fluid" style="background-color:#0F172D">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primaryNavbar">
+
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand" style="width: 150px;">@ViewData["Title"]</span>
+            </div>
+            <div class="collapse navbar-collapse" id="primaryNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="Users" asp-controller="Users" asp-action="Login" class="navbar-brand"></a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index" style="font-size: 17px;font-weight: bold;color: white;">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About" style="font-size: 17px;font-weight: bold;color: white;">About</a></li>
+                    <li><a asp-area="Result" asp-controller="Result" asp-action="AddNewResult" style="background-color: #0F172D;color:white;">Add Result</a></li>
+                    <li><a asp-area="Result" asp-controller="Result" asp-action="ResultList" style="background-color: #0F172D;color:white">Result List</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact" style="font-size: 17px;font-weight: bold;color: white;">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    @RenderBody()
+    <hr />
+    <footer>
+        <div class="container-fluid text-center" style="background-color: darkgreen;color:white;">
+            <br>
+            <div class="row">
+                <div class="col-sm-4">
+                    <span style="color: lawngreen; font-size: x-large">Important Links</span>
+                    <ul>
+                        <li><a target="_blank" href="https://www.teachers.gov.bd/%22" style="color: white">-শিক্ষক বাতায়ন</a></li>
+                        <li><a target="_blank" href="https://moedu.gov.bd/" style="color: white">-Ministry of Education</a></li>
+                        <li><a target="_blank" href="http://www.jessoreboard.gov.bd/" style="color: white">-Jessore Education Board</a></li>
+                        <li><a target="_blank" href="http://www.nctb.gov.bd/" style="color: white">-NCTB</a></li>
+                        <li><a target="_blank" href="http://www.bmeb.gov.bd/" style="color: white">-বাংলাদেশ মাদ্রাসা শিক্ষা বোর্ড</a></li>
+                        <li><a target="_blank" href="http://www.bteb.gov.bd/" style="color: white">-Technical Education Board</a></li>
+                        <li><a target="_blank" href="http://www.dshe.gov.bd/" style="color: white">-Directorate Of Secondary and Higher Education</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <span style="color: lawngreen; font-size: x-large">Address</span>
+                    <address>
+                        Kalaroa Alia (Fazil) Madrasha,<br />
+
+                        Kalaroa Alia (Fazil) Madrasha- 34085<br />
+                        Tulshidanga,<br /> Kalaroa Rd, Kalaroa - 9410
+                        <br />Satkhira-Jessore-Dhaka Highway
+                        <br />Khulna Bangladesh<br />
+
+                        Tel: 000000000<br />
+                        Mobile:+88-01718872653<br />
+                        Fax: 000000000<br />
+                        Email : kalaroaaliamadrasha.bd@gmail.com<br />
+                    </address>
+                </div>
+                <div class="col-sm-4">
+                    <span style="color: lawngreen; font-size: x-large">Social Links</span>
+                    <ul>
+                        <li><a href="https://facebook.com/?lang=en" style="color: white">Facebook</a></li>
+                        <li><a href="https://twitter.com/?lang=en" style="color: white">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/" style="color: white">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/" style="color: white">Linkedin</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .topbar, .copyrights-area {
+                background: #353535;
+            }
+
+            .copyrights-area {
+                background: none repeat scroll 0 0 #373c43;
+                height: 50px;
+                line-height: 50px;
+                overflow: hidden;
+            }
+        </style>
+        <div class="copyrights-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <p style="color:white;">2019 &copy; Kalaroa_Alia_Madrasha. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <ul class="list-inline">
+                            <li style="color:white;">Designed: <a href="https://www.facebook.com/touhedur.rahman.73" style="color: chartreuse;">Md. Touhedur Rahman</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
